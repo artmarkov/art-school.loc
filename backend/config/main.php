@@ -61,15 +61,15 @@ $config =  [
             'cookieValidationKey' => env('BACKEND_COOKIE_VALIDATION_KEY'),
             'baseUrl' => '/admin',
         ],
-        'assetManager' => [
-            'bundles' => [
-                'yii\bootstrap\BootstrapAsset' => [
-                   // 'sourcePath' => '@artsoft/assets/theme/bootswatch/custom',
-                    'sourcePath' => '@artsoft/assets/theme/bootstrap/dist/css',
-                    'css' => ['bootstrap.css']
-                ],
-            ],
-        ],
+//        'assetManager' => [
+//            'bundles' => [
+//                'yii\bootstrap\BootstrapAsset' => [
+//                   // 'sourcePath' => '@artsoft/assets/theme/bootswatch/custom',
+//                    'sourcePath' => '@artsoft/assets/theme/bootstrap/dist/css',
+//                    'css' => ['bootstrap.css']
+//                ],
+//            ],
+//        ],
         'urlManager' => [
             'class' => 'artsoft\web\MultilingualUrlManager',
             'showScriptName' => false,

@@ -26,7 +26,7 @@ class SmartAsset extends AssetBundle
         $this->css = [
             'css/vendors.bundle.css',
             'css/app.bundle.css',
-            'css/themes/cust-theme-4.css',
+//            'css/themes/cust-theme-4.css',
             'css/skins/skin-master.css',
         ];
 

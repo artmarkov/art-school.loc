@@ -22,58 +22,20 @@ $assetBundle = SmartAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <?= Html::csrfMetaTags() ?>
-<!--    <meta name="description" content="Page Title">-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
     <!-- Call App Mode on ios devices -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- Remove Tap Highlight on Windows Phone IE -->
     <meta name="msapplication-tap-highlight" content="no">
-    <!-- base css -->
-<!--        <link id="vendorsbundle" rel="stylesheet" media="screen, print" href="--><?//= $assetBundle->baseUrl ?><!--/css/vendors.bundle.css">-->
-<!--        <link id="appbundle" rel="stylesheet" media="screen, print" href="--><?//= $assetBundle->baseUrl ?><!--/css/app.bundle.css">-->
-<!--    <link id="mytheme" rel="stylesheet" media="screen, print" href="--><?//= $assetBundle->baseUrl ?><!--/css/themes/cust-theme-9.css">-->
-<!--        <link id="myskin" rel="stylesheet" media="screen, print" href="--><?//= $assetBundle->baseUrl ?><!--/css/skins/skin-master.css">-->
-    <!-- Place favicon.ico in the root directory -->
-<!--    <link rel="apple-touch-icon" sizes="180x180" href="--><?//= $assetBundle->baseUrl ?><!--/img/favicon/apple-touch-icon.png">-->
-<!--    <link rel="icon" type="image/png" sizes="32x32" href="--><?//= $assetBundle->baseUrl ?><!--/img/favicon/favicon-32x32.png">-->
-<!--    <link rel="mask-icon" href="--><?//= $assetBundle->baseUrl ?><!--/img/favicon/safari-pinned-tab.svg" color="#5bbad5">-->
-    <!-- You can add your own stylesheet here to override any styles that comes before it
-    <link rel="stylesheet" media="screen, print" href="/css/your_styles.css">-->
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link id="mytheme" rel="stylesheet" media="screen, print" href="">
 </head>
 <body>
 <?php $this->beginBody() ?>
-
-
 <!-- BEGIN Body -->
-<!-- Possible Classes
-
-    * 'header-function-fixed'         - header is in a fixed at all times
-    * 'nav-function-fixed'            - left panel is fixed
-    * 'nav-function-minify'			  - skew nav to maximize space
-    * 'nav-function-hidden'           - roll mouse on edge to reveal
-    * 'nav-function-top'              - relocate left pane to top
-    * 'mod-main-boxed'                - encapsulates to a container
-    * 'nav-mobile-push'               - content pushed on menu reveal
-    * 'nav-mobile-no-overlay'         - removes mesh on menu reveal
-    * 'nav-mobile-slide-out'          - content overlaps menu
-    * 'mod-bigger-font'               - content fonts are bigger for readability
-    * 'mod-high-contrast'             - 4.5:1 text contrast ratio
-    * 'mod-color-blind'               - color vision deficiency
-    * 'mod-pace-custom'               - preloader will be inside content
-    * 'mod-clean-page-bg'             - adds more whitespace
-    * 'mod-hide-nav-icons'            - invisible navigation icons
-    * 'mod-disable-animation'         - disables css based animations
-    * 'mod-hide-info-card'            - hides info card from left panel
-    * 'mod-lean-subheader'            - distinguished page header
-    * 'mod-nav-link'                  - clear breakdown of nav links
-
-    >>> more settings are described inside documentation page >>>
--->
 <body class="mod-bg-1 ">
 <!-- DOC: script to save and load page settings -->
 <script>
@@ -541,7 +503,7 @@ $assetBundle = SmartAsset::register($this);
                                             <li class="unread">
                                                 <a href="#" class="d-flex align-items-center">
                                                             <span class="status mr-2">
-                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-c.png')"></span>
+                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-c.png')"></span>
                                                             </span>
                                                     <span class="d-flex flex-column flex-1 ml-1">
                                                                 <span class="name">Melissa Ayre <span class="badge badge-primary fw-n position-absolute pos-top pos-right mt-1">INBOX</span></span>
@@ -554,7 +516,7 @@ $assetBundle = SmartAsset::register($this);
                                             <li class="unread">
                                                 <a href="#" class="d-flex align-items-center">
                                                             <span class="status mr-2">
-                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-a.png')"></span>
+                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-a.png')"></span>
                                                             </span>
                                                     <span class="d-flex flex-column flex-1 ml-1">
                                                                 <span class="name">Adison Lee</span>
@@ -566,7 +528,7 @@ $assetBundle = SmartAsset::register($this);
                                             <li>
                                                 <a href="#" class="d-flex align-items-center">
                                                             <span class="status status-success mr-2">
-                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-b.png')"></span>
+                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-b.png')"></span>
                                                             </span>
                                                     <span class="d-flex flex-column flex-1 ml-1">
                                                                 <span class="name">Oliver Kopyuv</span>
@@ -578,7 +540,7 @@ $assetBundle = SmartAsset::register($this);
                                             <li>
                                                 <a href="#" class="d-flex align-items-center">
                                                             <span class="status status-warning mr-2">
-                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-e.png')"></span>
+                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-e.png')"></span>
                                                             </span>
                                                     <span class="d-flex flex-column flex-1 ml-1">
                                                                 <span class="name">Dr. John Cook PhD</span>
@@ -590,8 +552,8 @@ $assetBundle = SmartAsset::register($this);
                                             <li>
                                                 <a href="#" class="d-flex align-items-center">
                                                             <span class="status status-success mr-2">
-                                                                <!-- <img src="img/demo/avatars/avatar-m.png" data-src="img/demo/avatars/avatar-h.png" class="profile-image rounded-circle" alt="Sarah McBrook" /> -->
-                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-h.png')"></span>
+                                                                 <img src="<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-m.png" data-src="<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-h.png" class="profile-image rounded-circle" alt="Sarah McBrook" />
+                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-h.png')"></span>
                                                             </span>
                                                     <span class="d-flex flex-column flex-1 ml-1">
                                                                 <span class="name">Sarah McBrook</span>
@@ -603,7 +565,7 @@ $assetBundle = SmartAsset::register($this);
                                             <li>
                                                 <a href="#" class="d-flex align-items-center">
                                                             <span class="status status-success mr-2">
-                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-m.png')"></span>
+                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-m.png')"></span>
                                                             </span>
                                                     <span class="d-flex flex-column flex-1 ml-1">
                                                                 <span class="name">Anothony Bezyeth</span>
@@ -615,7 +577,7 @@ $assetBundle = SmartAsset::register($this);
                                             <li>
                                                 <a href="#" class="d-flex align-items-center">
                                                             <span class="status status-danger mr-2">
-                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-j.png')"></span>
+                                                                <span class="profile-image rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-j.png')"></span>
                                                             </span>
                                                     <span class="d-flex flex-column flex-1 ml-1">
                                                                 <span class="name">Lisa Hatchensen</span>
@@ -660,18 +622,18 @@ $assetBundle = SmartAsset::register($this);
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-center show-child-on-hover">
-                                                    <!--<img src="img/demo/avatars/avatar-m.png" data-src="img/demo/avatars/avatar-k.png" class="profile-image rounded-circle" alt="k" />-->
+                                                    <!--<img src="<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-m.png" data-src="<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-k.png" class="profile-image rounded-circle" alt="k" />-->
                                                     <div class="d-flex flex-column flex-1">
                                                                 <span class="name">
                                                                     Troy Norman'<span class="fw-300">s new connections</span>
                                                                 </span>
                                                         <div class="fs-sm d-flex align-items-center mt-2">
-                                                            <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-a.png'); background-size: cover;"></span>
-                                                            <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-b.png'); background-size: cover;"></span>
-                                                            <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-c.png'); background-size: cover;"></span>
-                                                            <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-e.png'); background-size: cover;"></span>
+                                                            <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-a.png'); background-size: cover;"></span>
+                                                            <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-b.png'); background-size: cover;"></span>
+                                                            <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-c.png'); background-size: cover;"></span>
+                                                            <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-e.png'); background-size: cover;"></span>
                                                             <div data-hasmore="+3" class="rounded-circle profile-image-md mr-1">
-                                                                <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-h.png'); background-size: cover;"></span>
+                                                                <span class="profile-image-md mr-1 rounded-circle d-inline-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-h.png'); background-size: cover;"></span>
                                                             </div>
                                                         </div>
                                                         <span class="fs-nano text-muted mt-1">55 minutes ago</span>
@@ -683,7 +645,7 @@ $assetBundle = SmartAsset::register($this);
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-center show-child-on-hover">
-                                                    <!--<img src="img/demo/avatars/avatar-m.png" data-src="img/demo/avatars/avatar-e.png" class="profile-image-sm rounded-circle align-self-start mt-1" alt="k" />-->
+                                                    <!--<img src="<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-m.png" data-src="<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-e.png" class="profile-image-sm rounded-circle align-self-start mt-1" alt="k" />-->
                                                     <div class="d-flex flex-column flex-1">
                                                         <span class="name">Dr John Cook <span class="fw-300">sent a <span class="text-danger">new signal</span></span></span>
                                                         <span class="msg-a fs-sm mt-2">Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</span>
@@ -700,16 +662,16 @@ $assetBundle = SmartAsset::register($this);
                                                         <span class="name">Lab Images <span class="fw-300">were updated!</span></span>
                                                         <div class="fs-sm d-flex align-items-center mt-1">
                                                             <a href="#" class="mr-1 mt-1" title="Cell A-0012">
-                                                                <span class="d-block img-share" style="background-image:url('img/thumbs/pic-7.png'); background-size: cover;"></span>
+                                                                <span class="d-block img-share" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/thumbs/pic-7.png'); background-size: cover;"></span>
                                                             </a>
                                                             <a href="#" class="mr-1 mt-1" title="Patient A-473 saliva">
-                                                                <span class="d-block img-share" style="background-image:url('img/thumbs/pic-8.png'); background-size: cover;"></span>
+                                                                <span class="d-block img-share" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/thumbs/pic-8.png'); background-size: cover;"></span>
                                                             </a>
                                                             <a href="#" class="mr-1 mt-1" title="Patient A-473 blood cells">
-                                                                <span class="d-block img-share" style="background-image:url('img/thumbs/pic-11.png'); background-size: cover;"></span>
+                                                                <span class="d-block img-share" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/thumbs/pic-11.png'); background-size: cover;"></span>
                                                             </a>
                                                             <a href="#" class="mr-1 mt-1" title="Patient A-473 Membrane O.C">
-                                                                <span class="d-block img-share" style="background-image:url('img/thumbs/pic-12.png'); background-size: cover;"></span>
+                                                                <span class="d-block img-share" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/thumbs/pic-12.png'); background-size: cover;"></span>
                                                             </a>
                                                         </div>
                                                         <span class="fs-nano text-muted mt-1">55 minutes ago</span>
@@ -721,7 +683,7 @@ $assetBundle = SmartAsset::register($this);
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-center show-child-on-hover">
-                                                    <!--<img src="img/demo/avatars/avatar-m.png" data-src="img/demo/avatars/avatar-h.png" class="profile-image rounded-circle align-self-start mt-1" alt="k" />-->
+                                                    <!--<img src="<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-m.png" data-src="<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-h.png" class="profile-image rounded-circle align-self-start mt-1" alt="k" />-->
                                                     <div class="d-flex flex-column flex-1">
                                                         <div class="name mb-2">
                                                             Lisa Lamar<span class="fw-300"> updated project</span>
@@ -859,7 +821,7 @@ $assetBundle = SmartAsset::register($this);
                     <!-- app user menu -->
                     <div>
                         <a href="#" data-toggle="dropdown" title="drlantern@gotbootstrap.com" class="header-icon d-flex align-items-center justify-content-center ml-2">
-                            <img src="img/demo/avatars/avatar-admin.png" class="profile-image rounded-circle" alt="Dr. Codex Lantern">
+                            <img src="<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-admin.png" class="profile-image rounded-circle" alt="Dr. Codex Lantern">
                             <!-- you can also add username next to the avatar with the codes below:
                             <span class="ml-1 mr-1 text-truncate text-truncate-header hidden-xs-down">Me</span>
                             <i class="ni ni-chevron-down hidden-xs-down"></i> -->
@@ -868,7 +830,7 @@ $assetBundle = SmartAsset::register($this);
                             <div class="dropdown-header bg-trans-gradient d-flex flex-row py-4 rounded-top">
                                 <div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
                                             <span class="mr-2">
-                                                <img src="img/demo/avatars/avatar-admin.png" class="rounded-circle profile-image" alt="Dr. Codex Lantern">
+                                                <img src="<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-admin.png" class="rounded-circle profile-image" alt="Dr. Codex Lantern">
                                             </span>
                                     <div class="info-card-text">
                                         <div class="fs-lg text-truncate text-truncate-lg">Dr. Codex Lantern</div>
@@ -1196,7 +1158,7 @@ A nice area to add graphs or buttons -->
             <div class="dropdown-header bg-trans-gradient d-flex align-items-center w-100">
                 <div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
                             <span class="mr-2">
-                                <span class="rounded-circle profile-image d-block" style="background-image:url('img/demo/avatars/avatar-d.png'); background-size: cover;"></span>
+                                <span class="rounded-circle profile-image d-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-d.png'); background-size: cover;"></span>
                             </span>
                     <div class="info-card-text">
                         <a href="javascript:void(0);" class="fs-lg text-truncate text-truncate-lg text-white" data-toggle="dropdown" aria-expanded="false">
@@ -1230,7 +1192,7 @@ A nice area to add graphs or buttons -->
                                 <li>
                                     <a href="#" class="d-table w-100 px-2 py-2 text-dark hover-white" data-filter-tags="tracey chang online">
                                         <div class="d-table-cell align-middle status status-success status-sm ">
-                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-d.png'); background-size: cover;"></span>
+                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-d.png'); background-size: cover;"></span>
                                         </div>
                                         <div class="d-table-cell w-100 align-middle pl-2 pr-2">
                                             <div class="text-truncate text-truncate-md">
@@ -1245,7 +1207,7 @@ A nice area to add graphs or buttons -->
                                 <li>
                                     <a href="#" class="d-table w-100 px-2 py-2 text-dark hover-white" data-filter-tags="oliver kopyuv online">
                                         <div class="d-table-cell align-middle status status-success status-sm ">
-                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-b.png'); background-size: cover;"></span>
+                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-b.png'); background-size: cover;"></span>
                                         </div>
                                         <div class="d-table-cell w-100 align-middle pl-2 pr-2">
                                             <div class="text-truncate text-truncate-md">
@@ -1260,7 +1222,7 @@ A nice area to add graphs or buttons -->
                                 <li>
                                     <a href="#" class="d-table w-100 px-2 py-2 text-dark hover-white" data-filter-tags="dr john cook phd away">
                                         <div class="d-table-cell align-middle status status-warning status-sm ">
-                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-e.png'); background-size: cover;"></span>
+                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-e.png'); background-size: cover;"></span>
                                         </div>
                                         <div class="d-table-cell w-100 align-middle pl-2 pr-2">
                                             <div class="text-truncate text-truncate-md">
@@ -1275,7 +1237,7 @@ A nice area to add graphs or buttons -->
                                 <li>
                                     <a href="#" class="d-table w-100 px-2 py-2 text-dark hover-white" data-filter-tags="ali amdaney online">
                                         <div class="d-table-cell align-middle status status-success status-sm ">
-                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-g.png'); background-size: cover;"></span>
+                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-g.png'); background-size: cover;"></span>
                                         </div>
                                         <div class="d-table-cell w-100 align-middle pl-2 pr-2">
                                             <div class="text-truncate text-truncate-md">
@@ -1290,7 +1252,7 @@ A nice area to add graphs or buttons -->
                                 <li>
                                     <a href="#" class="d-table w-100 px-2 py-2 text-dark hover-white" data-filter-tags="sarah mcbrook online">
                                         <div class="d-table-cell align-middle status status-success status-sm">
-                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-h.png'); background-size: cover;"></span>
+                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-h.png'); background-size: cover;"></span>
                                         </div>
                                         <div class="d-table-cell w-100 align-middle pl-2 pr-2">
                                             <div class="text-truncate text-truncate-md">
@@ -1305,7 +1267,7 @@ A nice area to add graphs or buttons -->
                                 <li>
                                     <a href="#" class="d-table w-100 px-2 py-2 text-dark hover-white" data-filter-tags="ali amdaney offline">
                                         <div class="d-table-cell align-middle status status-sm">
-                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-a.png'); background-size: cover;"></span>
+                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-a.png'); background-size: cover;"></span>
                                         </div>
                                         <div class="d-table-cell w-100 align-middle pl-2 pr-2">
                                             <div class="text-truncate text-truncate-md">
@@ -1320,7 +1282,7 @@ A nice area to add graphs or buttons -->
                                 <li>
                                     <a href="#" class="d-table w-100 px-2 py-2 text-dark hover-white" data-filter-tags="ali amdaney busy">
                                         <div class="d-table-cell align-middle status status-danger status-sm">
-                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-j.png'); background-size: cover;"></span>
+                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-j.png'); background-size: cover;"></span>
                                         </div>
                                         <div class="d-table-cell w-100 align-middle pl-2 pr-2">
                                             <div class="text-truncate text-truncate-md">
@@ -1335,7 +1297,7 @@ A nice area to add graphs or buttons -->
                                 <li>
                                     <a href="#" class="d-table w-100 px-2 py-2 text-dark hover-white" data-filter-tags="ali amdaney offline">
                                         <div class="d-table-cell align-middle status status-sm">
-                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-c.png'); background-size: cover;"></span>
+                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-c.png'); background-size: cover;"></span>
                                         </div>
                                         <div class="d-table-cell w-100 align-middle pl-2 pr-2">
                                             <div class="text-truncate text-truncate-md">
@@ -1350,7 +1312,7 @@ A nice area to add graphs or buttons -->
                                 <li>
                                     <a href="#" class="d-table w-100 px-2 py-2 text-dark hover-white" data-filter-tags="ali amdaney inactive">
                                         <div class="d-table-cell align-middle">
-                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-m.png'); background-size: cover;"></span>
+                                            <span class="profile-image-md rounded-circle d-block" style="background-image:url('<?= $assetBundle->baseUrl ?>/img/demo/avatars/avatar-m.png'); background-size: cover;"></span>
                                         </div>
                                         <div class="d-table-cell w-100 align-middle pl-2 pr-2">
                                             <div class="text-truncate text-truncate-md">
@@ -1720,49 +1682,49 @@ A nice area to add graphs or buttons -->
                                 <a href="#" id="myapp-0" data-action="theme-update" data-themesave data-theme="" data-toggle="tooltip" data-placement="top" title="Wisteria (base css)" data-original-title="Wisteria (base css)"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-1" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-1.css" data-toggle="tooltip" data-placement="top" title="Tapestry" data-original-title="Tapestry"></a>
+                                <a href="#" id="myapp-1" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-1.css" data-toggle="tooltip" data-placement="top" title="Tapestry" data-original-title="Tapestry"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-2" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-2.css" data-toggle="tooltip" data-placement="top" title="Atlantis" data-original-title="Atlantis"></a>
+                                <a href="#" id="myapp-2" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-2.css" data-toggle="tooltip" data-placement="top" title="Atlantis" data-original-title="Atlantis"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-3" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-3.css" data-toggle="tooltip" data-placement="top" title="Indigo" data-original-title="Indigo"></a>
+                                <a href="#" id="myapp-3" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-3.css" data-toggle="tooltip" data-placement="top" title="Indigo" data-original-title="Indigo"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-4" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-4.css" data-toggle="tooltip" data-placement="top" title="Dodger Blue" data-original-title="Dodger Blue"></a>
+                                <a href="#" id="myapp-4" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-4.css" data-toggle="tooltip" data-placement="top" title="Dodger Blue" data-original-title="Dodger Blue"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-5" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-5.css" data-toggle="tooltip" data-placement="top" title="Tradewind" data-original-title="Tradewind"></a>
+                                <a href="#" id="myapp-5" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-5.css" data-toggle="tooltip" data-placement="top" title="Tradewind" data-original-title="Tradewind"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-6" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-6.css" data-toggle="tooltip" data-placement="top" title="Cranberry" data-original-title="Cranberry"></a>
+                                <a href="#" id="myapp-6" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-6.css" data-toggle="tooltip" data-placement="top" title="Cranberry" data-original-title="Cranberry"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-7" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-7.css" data-toggle="tooltip" data-placement="top" title="Oslo Gray" data-original-title="Oslo Gray"></a>
+                                <a href="#" id="myapp-7" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-7.css" data-toggle="tooltip" data-placement="top" title="Oslo Gray" data-original-title="Oslo Gray"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-8" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-8.css" data-toggle="tooltip" data-placement="top" title="Chetwode Blue" data-original-title="Chetwode Blue"></a>
+                                <a href="#" id="myapp-8" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-8.css" data-toggle="tooltip" data-placement="top" title="Chetwode Blue" data-original-title="Chetwode Blue"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-9" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-9.css" data-toggle="tooltip" data-placement="top" title="Apricot" data-original-title="Apricot"></a>
+                                <a href="#" id="myapp-9" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-9.css" data-toggle="tooltip" data-placement="top" title="Apricot" data-original-title="Apricot"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-10" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-10.css" data-toggle="tooltip" data-placement="top" title="Blue Smoke" data-original-title="Blue Smoke"></a>
+                                <a href="#" id="myapp-10" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-10.css" data-toggle="tooltip" data-placement="top" title="Blue Smoke" data-original-title="Blue Smoke"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-11" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-11.css" data-toggle="tooltip" data-placement="top" title="Green Smoke" data-original-title="Green Smoke"></a>
+                                <a href="#" id="myapp-11" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-11.css" data-toggle="tooltip" data-placement="top" title="Green Smoke" data-original-title="Green Smoke"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-12" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-12.css" data-toggle="tooltip" data-placement="top" title="Wild Blue Yonder" data-original-title="Wild Blue Yonder"></a>
+                                <a href="#" id="myapp-12" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-12.css" data-toggle="tooltip" data-placement="top" title="Wild Blue Yonder" data-original-title="Wild Blue Yonder"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-13" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-13.css" data-toggle="tooltip" data-placement="top" title="Emerald" data-original-title="Emerald"></a>
+                                <a href="#" id="myapp-13" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-13.css" data-toggle="tooltip" data-placement="top" title="Emerald" data-original-title="Emerald"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-14" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-14.css" data-toggle="tooltip" data-placement="top" title="Supernova" data-original-title="Supernova"></a>
+                                <a href="#" id="myapp-14" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-14.css" data-toggle="tooltip" data-placement="top" title="Supernova" data-original-title="Supernova"></a>
                             </li>
                             <li>
-                                <a href="#" id="myapp-15" data-action="theme-update" data-themesave data-theme="css/themes/cust-theme-15.css" data-toggle="tooltip" data-placement="top" title="Hoki" data-original-title="Hoki"></a>
+                                <a href="#" id="myapp-15" data-action="theme-update" data-themesave data-theme="<?= $assetBundle->baseUrl ?>/css/themes/cust-theme-15.css" data-toggle="tooltip" data-placement="top" title="Hoki" data-original-title="Hoki"></a>
                             </li>
                         </ul>
                     </div>
@@ -1787,7 +1749,7 @@ A nice area to add graphs or buttons -->
                                     <div class="d-flex flex-column flex-1">
                                         <div class="bg-white border-bottom border-primary py-1"></div>
                                         <div class="bg-faded flex-1 pt-3 pb-3 px-2">
-                                            <div class="py-3" style="background:url('img/demo/s-1.png') top left no-repeat;background-size: 100%;"></div>
+                                            <div class="py-3" style="background:url('<?= $assetBundle->baseUrl ?>/img/demo/s-1.png') top left no-repeat;background-size: 100%;"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1799,7 +1761,7 @@ A nice area to add graphs or buttons -->
                                     <div class="d-flex flex-column flex-1">
                                         <div class="bg-white border-bottom border- py-1"></div>
                                         <div class="bg-white flex-1 pt-3 pb-3 px-2">
-                                            <div class="py-3" style="background:url('img/demo/s-1.png') top left no-repeat;background-size: 100%;"></div>
+                                            <div class="py-3" style="background:url('<?= $assetBundle->baseUrl ?>/img/demo/s-1.png') top left no-repeat;background-size: 100%;"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1811,7 +1773,7 @@ A nice area to add graphs or buttons -->
                                     <div class="d-flex flex-column flex-1">
                                         <div class="bg-fusion-600 border-bottom py-1"></div>
                                         <div class="bg-fusion-300 flex-1 pt-3 pb-3 px-2">
-                                            <div class="py-3 opacity-30" style="background:url('img/demo/s-1.png') top left no-repeat;background-size: 100%;"></div>
+                                            <div class="py-3 opacity-30" style="background:url('<?= $assetBundle->baseUrl ?>/img/demo/s-1.png') top left no-repeat;background-size: 100%;"></div>
                                         </div>
                                     </div>
                                 </div>
