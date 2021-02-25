@@ -6,41 +6,38 @@ use artsoft\models\User;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
-
+use Yii;
 /**
  * Class Nav
  *
- * Show only those items in navigation menu which user can see.
- * If item has no "visible" key, than "visible" => User::canRoute($item['url') will be added.
- *
- * Nav support sub-dropdown menus. Submenus has no nested level limit.
- *
- * @var array $options setting for menu and submenus
- *
- * If $options is one dimensional array then this options will be applied to all sub-menus. Example:
- * 'options' => ['class' => 'nav nav-menu']
- *
- * If $options is two dimensional array then this options will be applied according
- * to nested submenu level. If there is no options for current level, default settings
- * will be applied. Example:
- * 'options' => [
- *   [ 'class' => 'nav nav-first-level'],
- *   [ 'class' => 'nav nav-second-level'],
- *   [ 'class' => 'nav nav-third-level']
- * ]
- *
  * @package artsoft\widgets
  */
-class Nav extends \yii\bootstrap\Nav
+class SANav extends \yii\bootstrap\Nav
 {
 
-    public $activeClass = 'mm-active';
-
+    public $activeClass = 'active';
+    public $items = [];
     public function init()
     {
-        parent::init();
-
+//        parent::init();
+        if ($this->route === null && Yii::$app->controller !== null) {
+            $this->route = Yii::$app->controller->getRoute();
+        }
+        if ($this->params === null) {
+            $this->params = Yii::$app->request->getQueryParams();
+        }
+        if ($this->dropDownCaret === null) {
+            $this->dropDownCaret = '<span class="caret"></span>';
+        }
+//        Html::addCssClass($this->options, ['widget' => 'nav-menu']);
         $this->ensureVisibility($this->items);
+    }
+    /**
+     * Renders the widget.
+     */
+    public function run()
+    {
+        return $this->renderItems();
     }
 
     /**
@@ -93,8 +90,7 @@ class Nav extends \yii\bootstrap\Nav
             $items[] = $this->renderItem($item, $level);
         }
 
-        return Html::tag('ul', implode("\n", $items),
-            $this->getLevelOptions($level));
+        return Html::tag('ul', implode("\n", $items), $this->getLevelOptions($level));
     }
 
     /**
@@ -113,9 +109,7 @@ class Nav extends \yii\bootstrap\Nav
         if (!isset($item['label'])) {
             throw new InvalidConfigException("The 'label' option is required.");
         }
-        if (isset($item['icon'])) {
 
-        }
         $encodeLabel = isset($item['encode']) ? $item['encode'] : $this->encodeLabels;
         $label = isset($item['icon']) ? '<i class="' . $item['icon'] . '"></i> ' : null;
         $label .= $encodeLabel ? Html::encode($item['label']) : $item['label'];
@@ -131,9 +125,9 @@ class Nav extends \yii\bootstrap\Nav
         }
 
         if ($items !== null) {
-            $linkOptions['data-toggle'] = 'dropdown';
-            Html::addCssClass($options, 'dropdown');
-            Html::addCssClass($linkOptions, 'dropdown-toggle');
+//            $linkOptions['data-toggle'] = 'dropdown';
+//            Html::addCssClass($options, 'dropdown');
+//            Html::addCssClass($linkOptions, 'dropdown-toggle');
             if ($this->dropDownCaret !== '') {
                 $label .= ' ' . $this->dropDownCaret;
             }
@@ -161,14 +155,15 @@ class Nav extends \yii\bootstrap\Nav
      */
     private function getLevelOptions($level = 0)
     {
-        if ($this->options === NULL) return NULL;
+        if ($level != 0) return [];
 
-        if (isset($this->options[$level]) && is_array($this->options[$level]))
-            return $this->options[$level];
+//        if (isset($this->options[$level]) && is_array($this->options[$level]))
+//            return $this->options[$level];
+//
+//        if (!isset($this->options[$level]) && isset($this->options[0]) && is_array($this->options[0]))
+//            return ['class' => 'nav-menu'];
 
-        if (!isset($this->options[$level]) && isset($this->options[0]) && is_array($this->options[0]))
-            return ['class' => 'nav'];
-
-        return $this->options;
+        return ['id' => "js-nav-menu", 'class' => 'nav-menu'];
     }
+
 }

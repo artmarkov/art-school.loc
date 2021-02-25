@@ -2,122 +2,174 @@
 use artsoft\widgets\Nav;
 ?>
 <!-- SIDEBAR NAV -->
-<div class="navbar-default sidebar metismenu" role="navigation">
-    <?= Nav::widget([
-        'encodeLabels' => false,
-        'dropDownCaret' => '<span class="arrow"></span>',
-        'options' => [
-            ['class' => 'nav side-menu'],
-            ['class' => 'nav nav-second-level'],
-            ['class' => 'nav nav-third-level']
-        ],
+<nav id="js-primary-nav" class="primary-nav" role="navigation">
+    <?= \artsoft\widgets\SANav::widget([
         'items'  => [
             [
                 'label' => 'Главная',
-                'icon' => 'fa fa-th',
+                'icon' => 'fal fa-th',
                 'url' => '/admin',
             ],
             [
                 'label' => 'Реестры',
-                'icon' => 'fa fa-list',
+                'icon' => 'fal fa-list',
                 'url' => '#',
-//                'options' => ['class' => 'treeview'],
                 'items' => [
-                    ['label' => 'Контрагенты', 'icon' => 'fa fa-minus', 'url' => ['client/index']],
-                    ['label' => 'Заявления', 'icon' => 'fa fa-minus', 'url' => ['order/index']],
-                    ['label' => 'Список сотрудников', 'icon' => 'fa fa-minus', 'url' => ['employees/index']],
-                    ['label' => 'Список учеников', 'icon' => 'fa fa-minus', 'url' => ['students/index']],
-                    ['label' => 'Список родителей', 'icon' => 'fa fa-minus', 'url' => ['parents/index']],
+                    ['label' => 'Контрагенты', 'url' => ['client/index']],
+                    ['label' => 'Заявления', 'url' => ['order/index']],
+                    ['label' => 'Список сотрудников', 'url' => ['employees/index']],
+                    ['label' => 'Список учеников', 'url' => ['students/index']],
+                    ['label' => 'Список родителей', 'url' => ['parents/index']],
                 ],
             ],
             [
                 'label' => 'Организационная работа',
-                'icon' => 'fa fa-university',
+                'icon' => 'fal fa-university',
                 'url' => '#',
-//                'options' => ['class' => 'treeview'],
                 'items' => [
-                    ['label' => 'План мероприятий', 'icon' => 'fa fa-minus', 'url' => ['activities/index']],
-                    ['label' => 'Учебные планы', 'icon' => 'fa fa-minus', 'url' => ['studyplan/index']],
-                    ['label' => 'Счета за обучение', 'icon' => 'fa fa-minus', 'url' => ['attandlog/index']],
-                    ['label' => 'Табель учета педагогических часов', 'icon' => 'fa fa-minus', 'url' => ['attandlog/index']],
-                    ['label' => 'Календарный график', 'icon' => 'fa fa-minus', 'url' => ['attandlog/index']],
-                    ['label' => 'Работы и сертификаты', 'icon' => 'fa fa-minus', 'url' => ['creative/index']],
+                    ['label' => 'План мероприятий', 'url' => ['activities/index']],
+                    ['label' => 'Учебные планы', 'url' => ['studyplan/index']],
+                    ['label' => 'Счета за обучение', 'url' => ['attandlog/index']],
+                    ['label' => 'Табель учета педагогических часов', 'url' => ['attandlog/index']],
+                    ['label' => 'Календарный график', 'url' => ['attandlog/index']],
+                    ['label' => 'Работы и сертификаты', 'url' => ['creative/index']],
                 ],
             ],
             [
                 'label' => 'Учебная работа',
-                'icon' => 'fa fa-graduation-cap',
+                'icon' => 'fal fa-graduation-cap',
                 'url' => '#',
-//                'options' => ['class' => 'treeview'],
                 'items' => [
-                    ['label' => 'Вступительные экзамены', 'icon' => 'fa fa-minus', 'url' => ['attandlog/index']],
-                    ['label' => 'Движение учеников', 'icon' => 'fa fa-minus', 'url' => ['attandlog/index']],
-                    ['label' => 'Расписание занятий', 'icon' => 'fa fa-minus', 'url' => ['attandlog/index']],
-                    ['label' => 'Календарь мероприятий', 'icon' => 'fa fa-minus', 'url' => ['attandlog/index']],
-                    ['label' => 'Журнал успеваемости', 'icon' => 'fa fa-minus', 'url' => ['attandlog/index']],
+                    ['label' => 'Вступительные экзамены', 'url' => ['attandlog/index']],
+                    ['label' => 'Движение учеников', 'url' => ['attandlog/index']],
+                    ['label' => 'Расписание занятий', 'url' => ['attandlog/index']],
+                    ['label' => 'Календарь мероприятий', 'url' => ['attandlog/index']],
+                    ['label' => 'Журнал успеваемости', 'url' => ['attandlog/index']],
                 ],
             ],
             [
                 'label' => 'Аналитика',
-                'icon' => 'fa fa-bar-chart',
+                'icon' => 'fal fa-bar-chart',
                 'url' => '#',
-//                'options' => ['class' => 'treeview'],
                 'items' => [
-                    ['label' => 'Журнал посещений', 'icon' => 'fa fa-minus', 'url' => ['attandlog/index']],
-                    ['label' => 'Показатели эфективности', 'icon' => 'fa fa-minus', 'url' => ['visual/index']],
-                    ['label' => 'Портфолио преподавателей', 'icon' => 'fa fa-minus', 'url' => ['visual/index']],
-                    ['label' => 'Контроль исполнения', 'icon' => 'fa fa-minus', 'url' => ['visual/index']],
-//                            ['label' => 'Визуализация', 'icon' => 'fa fa-minus', 'url' => ['visual/index']],
+                    ['label' => 'Журнал посещений', 'url' => ['attandlog/index']],
+                    ['label' => 'Показатели эфективности', 'url' => ['visual/index']],
+                    ['label' => 'Портфолио преподавателей', 'url' => ['visual/index']],
+                    ['label' => 'Контроль исполнения', 'url' => ['visual/index']],
                 ],
             ],
             [
                 'label' => 'Справочники',
-                'icon' => 'fa fa-briefcase',
+                'icon' => 'fal fa-briefcase',
                 'url' => '#',
-//                'options' => ['class' => 'treeview'],
                 'items' => [
-                    ['label' => 'Аудитории школы', 'icon' => 'fa fa-minus', 'url' => ['auditory/index']],
-                    ['label' => 'Дисциплины', 'icon' => 'fa fa-minus', 'url' => ['subject/index']],
-                    ['label' => 'Сведения об организации', 'icon' => 'fa fa-minus', 'url' => ['own/index']],
-//                            ['label' => 'Справочник ОКСМ', 'icon' => 'fa fa-minus', 'url' => ['oksm/index']],
+                    ['label' => 'Аудитории школы', 'url' => ['auditory/index']],
+                    ['label' => 'Дисциплины', 'url' => ['subject/index']],
+                    ['label' => 'Сведения об организации', 'url' => ['own/index']],
                 ],
             ],
             [
                 'label' => 'Администрирование',
-                'icon' => 'fa fa-cogs',
+                'icon' => 'fal fa-cogs',
                 'url' => '#',
-//                'options' => ['class' => 'treeview'],
                 'items' => [
-                    ['label' => 'Сеансы', 'icon' => 'fa fa-minus', 'url' => ['/user/session/index']],
-                    ['label' => 'Журнал', 'icon' => 'fa fa-minus', 'url' => ['/user/request/index']],
-                    ['label' => 'Лог посещений', 'icon' => 'fa fa-minus', 'url' => ['/user/visit-log/index']],
-                    ['label' => 'Пользователи', 'icon' => 'fa fa-minus', 'url' => ['/user/default/index'],],
-                    ['label' => 'Роли', 'icon' => 'fa fa-minus', 'url' => ['/user/role/index']],
-                    ['label' => 'Права доступа', 'icon' => 'fa fa-minus', 'url' => ['/user/permission/index']],
-                    ['label' => 'Группы прав доступа', 'icon' => 'fa fa-minus', 'url' => ['/user/permission-groups/index']],
-                    ['label' => 'Календарь', 'icon' => 'fa fa-minus', 'url' => ['calendar/index']],
-                    ['label' => 'Назначенные задания', 'icon' => 'fa fa-minus', 'url' => ['/queue-schedule/default/index']],
-                    ['label' => 'Инструменты админа', 'icon' => 'fa fa-minus', 'url' => ['admin/tools']],
-                    ['label' => 'Очистить кэш', 'icon' => 'fa fa-minus', 'url' => ['/settings/cache/flush']],
-                    ['label' => 'Общие настройки', 'icon' => 'fa fa-minus', 'url' => ['/settings/default/index']],
-                    ['label' => 'Настройки чтения', 'icon' => 'fa fa-minus', 'url' => ['/settings/reading/index']],
+                    ['label' => 'Сеансы', 'url' => ['/user/session/index']],
+                    ['label' => 'Журнал', 'url' => ['/user/request/index']],
+                    ['label' => 'Лог посещений', 'url' => ['/user/visit-log/index']],
+                    ['label' => 'Пользователи', 'url' => ['/user/default/index'],],
+                    ['label' => 'Роли', 'url' => ['/user/role/index']],
+                    ['label' => 'Права доступа', 'url' => ['/user/permission/index']],
+                    ['label' => 'Группы прав доступа', 'url' => ['/user/permission-groups/index']],
+                    ['label' => 'Календарь', 'url' => ['calendar/index']],
+                    ['label' => 'Назначенные задания', 'url' => ['/queue-schedule/default/index']],
+                    ['label' => 'Инструменты админа', 'url' => ['admin/tools']],
+                    ['label' => 'Очистить кэш', 'url' => ['/settings/cache/flush']],
+                    ['label' => 'Общие настройки', 'url' => ['/settings/default/index']],
+                    ['label' => 'Настройки чтения', 'url' => ['/settings/reading/index']],
                 ],
             ],
             [
                 'label' => 'Помощь',
-                'icon' => 'fa fa-question-circle',
+                'icon' => 'fal fa-question-circle',
                 'url' => '#',
-//                'options' => ['class' => 'treeview'],
                 'items' => [
-                    ['label' => 'Техническая поддержка', 'icon' => 'fa fa-minus', 'url' => ['support/index']],
-                    ['label' => 'Руководства пользователя', 'icon' => 'fa fa-minus', 'url' => ['site/help']],
-                    ['label' => 'О системе', 'icon' => 'fa fa-minus', 'url' => ['site/about']],
+                    ['label' => 'Техническая поддержка', 'url' => ['support/index']],
+                    ['label' => 'Руководства пользователя', 'url' => ['site/help']],
+                    ['label' => 'О системе', 'url' => ['site/about']],
                 ],
             ],
-            ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'], 'visible' => isset(Yii::$app->modules['debug'])],
-            ['label' => 'Gii', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii'], 'visible' => Yii::$app->getModule('gii') !== null],
+            ['label' => 'Debug', 'icon' => 'fal fa-dashboard', 'url' => ['/debug'], 'visible' => isset(Yii::$app->modules['debug'])],
+            ['label' => 'Gii', 'icon' => 'fal fa-file-code-o', 'url' => ['/gii'], 'visible' => Yii::$app->getModule('gii') !== null],
         ],
     ]) ?>
 <!--    --><?php //print_r(Menu::getMenuItems('admin-menu'))?>
-</div>
+</nav>
 <!-- !SIDEBAR NAV -->
+
+
+<!--<nav id="js-primary-nav" class="primary-nav" role="navigation">-->
+<!--    <!---->
+<!--    TIP: The menu items are not auto translated. You must have a residing lang file associated with the menu saved inside dist/media/data with reference to each 'data-i18n' attribute.-->
+<!--    -->-->
+<!--    <ul id="js-nav-menu" class="nav-menu">-->
+<!--        <li class="active">-->
+<!--            <a href="blank.html" title="Blank Project" data-filter-tags="blank page">-->
+<!--                <i class="fal fa-globe"></i>-->
+<!--                <span class="nav-link-text" data-i18n="nav.blankpage">Blank Project</span>-->
+<!--            </a>-->
+<!--        </li>-->
+<!--        <li class="nav-title">Navigation Title</li>-->
+<!--        <li>-->
+<!--            <a href="#" title="Category" data-filter-tags="category">-->
+<!--                <i class="fal fa-file"></i>-->
+<!--                <span class="nav-link-text" data-i18n="nav.category">Category</span>-->
+<!--            </a>-->
+<!--            <ul>-->
+<!--                <li>-->
+<!--                    <a href="javascript:void(0);" title="Menu child" data-filter-tags="utilities menu child">-->
+<!--                        <span class="nav-link-text" data-i18n="nav.utilities_menu_child">Sub-category</span>-->
+<!--                    </a>-->
+<!--                    <ul>-->
+<!--                        <li>-->
+<!--                            <a href="javascript:void(0);" title="Sublevel Item" data-filter-tags="utilities menu child sublevel item">-->
+<!--                                <span class="nav-link-text" data-i18n="nav.utilities_menu_child_sublevel_item">Sublevel Item</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="javascript:void(0);" title="Another Item" data-filter-tags="utilities menu child another item">-->
+<!--                                <span class="nav-link-text" data-i18n="nav.utilities_menu_child_another_item">Another Item</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li class="disabled">-->
+<!--                    <a href="javascript:void(0);" title="Disabled item" data-filter-tags="utilities disabled item">-->
+<!--                        <span class="nav-link-text" data-i18n="nav.utilities_disabled_item">Disabled item</span>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--        <!-- Example of open and active states -->-->
+<!--        <li class="active open">-->
+<!--            <a href="#" title="Category" data-filter-tags="category">-->
+<!--                <i class="fal fa-plus"></i>-->
+<!--                <span class="nav-link-text" data-i18n="nav.category">Open Item</span>-->
+<!--            </a>-->
+<!--            <ul>-->
+<!--                <li class="active open">-->
+<!--                    <a href="javascript:void(0);" title="Menu child" data-filter-tags="utilities menu child">-->
+<!--                        <span class="nav-link-text" data-i18n="nav.utilities_menu_child">Open Sub-category</span>-->
+<!--                    </a>-->
+<!--                    <ul>-->
+<!--                        <li class="active">-->
+<!--                            <a href="javascript:void(0);" title="Sublevel Item" data-filter-tags="utilities menu child sublevel item">-->
+<!--                                <span class="nav-link-text" data-i18n="nav.utilities_menu_child_sublevel_item">Active Item</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    <!--                <div class="filter-message js-filter-message bg-success-600"></div>-->-->
+<!--</nav>-->
